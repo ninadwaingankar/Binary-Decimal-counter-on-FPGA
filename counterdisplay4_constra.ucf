@@ -1,0 +1,43 @@
+#Implementation constrains file for binary 4 bit updown counter with decimal display on 7 segment display
+#XILINX Spartan 6 Mini SP6 V2 FPGA
+# FPGAtechsolution
+
+#reset push button
+NET rst LOC = P17 | IOSTANDARD = LVCMOS33; 
+
+#up down status dip switch
+#NET status LOC = P80 | IOSTANDARD = LVCMOS33; 
+
+#developed by Ninad Waingankar
+
+#12 mhz clock input
+NET clk LOC = P87 | IOSTANDARD = LVCMOS33; 
+
+#Counter output on LEDS of FPGA
+
+NET binary(3) loc=p9 | IOSTANDARD = LVCMOS33;
+NET binary(2) loc=p8 | IOSTANDARD = LVCMOS33;
+NET binary(1) loc=p6 | IOSTANDARD = LVCMOS33; 
+NET binary(0) loc=p5 | IOSTANDARD = LVCMOS33; 
+
+#Counter output on7 seg display
+
+#MSB (6) to LSB (0) abcdefg format
+
+#digit1 
+NET dig1(13) LOC = P22 | IOSTANDARD = LVCMOS33;
+NET dig1(12) LOC = P21 | IOSTANDARD = LVCMOS33;
+NET dig1(11) LOC = P24 | IOSTANDARD = LVCMOS33;
+NET dig1(10) LOC = P23 | IOSTANDARD = LVCMOS33;
+NET dig1(9) LOC = P27 | IOSTANDARD = LVCMOS33;
+NET dig1(8) LOC = P26 | IOSTANDARD = LVCMOS33;
+NET dig1(7) LOC = P30 | IOSTANDARD = LVCMOS33; 
+
+#digit2 
+NET dig1(6) LOC = P29 | IOSTANDARD = LVCMOS33;
+NET dig1(5) LOC = P33 | IOSTANDARD = LVCMOS33;
+NET dig1(4) LOC = P32 | IOSTANDARD = LVCMOS33;
+NET dig1(3) LOC = P35 | IOSTANDARD = LVCMOS33;
+NET dig1(2) LOC = P34 | IOSTANDARD = LVCMOS33;
+NET dig1(1) LOC = P41 | IOSTANDARD = LVCMOS33;
+NET dig1(0) LOC = P40 | IOSTANDARD = LVCMOS33;
